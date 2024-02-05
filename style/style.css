@@ -5,7 +5,8 @@
 
 body{
     background-color: rgb(6, 23, 39);
-    background-image: url(/imagenes/fondo.jpg);
+    background-image: url(../imagenes/fondo.jpg);
+    background-image: url(.);
     background-repeat: no-repeat;
     background-size: cover;
     display:flex;
