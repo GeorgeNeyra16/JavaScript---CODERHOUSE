@@ -1,214 +1,140 @@
-//Bienvenida y consulta del nombre
-let nombre
-let email
-let edad
-let producto
-let marca
-let color
+// const productos = [
+//     {id:"L1", producto:"LANYARD", marca:"BOEING", color:"AZUL", precio:30},
+//     {id:"L2", producto:"LANYARD", marca:"BOEING", color:"AZUL", precio:28},
+//     {id:"L3", producto:"LANYARD", marca:"BOEING", color:"AZUL", precio:25},
+//     {id:"L4", producto:"LANYARD", marca:"BORN TO FLY", color:"ROSADO", precio:20},
+//     {id:"L5", producto:"LANYARD", marca:"REMOVE BEFORE FLIGHT", color:"ROJO", precio:18},
+//     {id:"L6", producto:"LANYARD", marca:"AIRBUS", color:"NEGRO", precio:35},
+//     {id:"L7", producto:"LANYARD", marca:"AIRBUS", color:"AZUL", precio:30},
+//     {id:"L8", producto:"LANYARD", marca:"CESSNA", color:"NEGRO", precio:20},
+//     {id:"L9", producto:"LANYARD", marca:"ATC", color:"NEGRO", precio:28},
+//     {id:"L10", producto:"LANYARD", marca:"ATC", color:"ROJO", precio:28},
+// ]
+//------------------------PRODUCTOS-----------------------
+function productos(id, producto, marca, color, precio) {
+    this.id = id;
+    this.producto = producto.toUpperCase();
+    this.marca = marca.toUpperCase();
+    this.color = color.toUpperCase();
+    this.precio = precio;
 
-nombre = prompt("Bienvenido a la plataforma de UMBRAL'98✈️, somos los especialistas en brindarte los mejores productos personalizados con temática aeronáutica! \n\nPorfavor indicanos tu nombre👨‍✈️:")
+}
 
-email = prompt("Brindanos tu e-mail, así te podremos enviar el catálogo de los productos de interés👨‍✈️:")
+const producto1 = new productos(1,"LANYARD","BOEING","AZUL",30);
+const producto2 = new productos(2, "LANYARD", "BOEING", "AZUL", 28);
+const producto3 = new productos(3, "LANYARD", "BOEING", "AZUL", 25);
+const producto4 = new productos(4, "LANYARD", "BORN TO FLY", "ROSADO", 20);
+const producto5 = new productos(5, "LANYARD", "REMOVE BEFORE FLIGHT", "ROJO", 18);
+const producto6 = new productos(6, "LANYARD", "AIRBUS", "NEGRO", 35);
+const producto7 = new productos(7, "LANYARD", "AIRBUS", "AZUL", 30);
+const producto8 = new productos(8, "LANYARD", "CESSNA", "NEGRO", 20);
+const producto9 = new productos(9, "LANYARD", "ATC", "NEGRO", 28);
+const producto10 = new productos(10, "LANYARD", "ATC", "ROJO", 28);
 
-while (true) {
-    edad = parseInt(prompt("Cual es tu edad " + nombre + "? 😁✌"))
-    
-    if (edad !== "") {
-        if (edad >= 18){
-            alert("Bienvenido " + nombre + "🤗");
-            
-            let consultaProducto = prompt("Sabemos que buscas el mejor producto personalizado pero ayúdanos siendo un poco más específico, ¿Qué buscas? (Indicar un número): \n1. Tazas \n2. Polos \n3. Cuadros \n4. Pines \n5. Pulseras \n6. Lanyards")
-            
-            while (true){
-                if (consultaProducto !== ""){
-                    while (true) {
-                        if (consultaProducto === "1"){
-                            producto = "Tazas"
-                            break
-                        } else if (consultaProducto === "2"){
-                            producto = "Polos"
-                            break
-                        } else if (consultaProducto === "3"){
-                            producto = "Cuadros"
-                            break
-                        } else if (consultaProducto === "4"){
-                            producto = "Pines"
-                            break
-                        } else if (consultaProducto === "5"){
-                            producto = "Pulseras"
-                            break
-                        } else if (consultaProducto === "6"){
-                            producto = "Lanyards"
-                            break
-                        } else {
-                            alert("Ingresaste una opción que no es valida😥, intentalo de nuevo!")
-                            consultaProducto = prompt("Sabemos que buscas el mejor producto personalizado pero ayúdanos siendo un poco más específico, ¿Qué buscas? (Indicar un número): \n1. Tazas \n2. Polos \n3. Cuadros \n4. Pines \n5. Pulseras \n6. Lanyards")
-                        }
-                    }
-                    break;
-                } else {
-                    alert("No ingresaste ninguna opción😥, intentalo de nuevo!")
-                    consultaProducto = prompt("Sabemos que buscas el mejor producto personalizado pero ayúdanos siendo un poco más específico, ¿Qué buscas? (Indicar un número): \n1. Tazas \n2. Polos \n3. Cuadros \n4. Pines \n5. Pulseras \n6. Lanyards")
-                }
-            }
+
+let products = []
+
+products.push(producto1);
+products.push(producto2);
+products.push(producto3);
+products.push(producto4);
+products.push(producto5);
+products.push(producto6);
+products.push(producto7);
+products.push(producto8);
+products.push(producto9);
+products.push(producto10);
+
+console.log(products);
+//-----------------------------------------------------------
+
+//definiento el CARRITO
+
+class Canasta {
+    constructor() {
+        this.productos = [];
+        this.descuento = 10;
+        this.totalPagar = 0;
+    }
+
+    agregarProducto(id) {
+        let producto = products.find(prod => prod.id === id);
+
+        if(producto) {
+            this.productos.push(producto);
+            console.log("Acabas de agregar el producto #" + id + " a la Canasta");
+        } else {
+            console.log("Lo siento, no encontramos ese producto😥.")
         }
-        break;
+    }
+
+    listarCanasta() {
+        let salida = "";
         
-    } else {
-        alert("Lo siento " + nombre + ", indicaste una edad que no es valida😥, intentalo de nuevo!");
-        edad = parseInt(prompt("Cual es tu edad " + nombre + "? 😁✌"));
+        this.productos.forEach( item => {
+            salida += "ID: "+ item.id + " y cuesta S/." + item.precio + "\n";
+        })
+    
+        return salida;
     }
-}
+    //----
 
+    calcularTotalProductos() {
+        return this.productos.length;
+    }
 
-let consultaMarca = prompt("Ahora por favor ayúdanos eligiendo una marca en específico (Indicar un número): \n1. BOEING \n2. AIRBUS \n3. CESSNA \n4. LAN \n5. LATAM \n6. JETSMART \n7. VIVA \n8. Sin Marca")
-
-while (true) {
-    if (consultaMarca !== "") {
-        while(true){
-            
-            if (consultaMarca === "1"){
-                marca = "BOEING"
-                break
-            } else if (consultaMarca === "2"){
-                marca = "AIRBUS"
-                break
-            } else if (consultaMarca === "3"){
-                marca = "CESSNA"
-                break
-            } else if (consultaMarca === "4"){
-                marca = "LAN"
-                break
-            } else if (consultaMarca === "5"){
-                marca = "LATAM"
-                break
-            } else if (consultaMarca === "6"){
-                marca = "JETSMART"
-                break
-            } else if (consultaMarca === "7"){
-                marca = "VIVA"
-                break
-            } else if (consultaMarca === "8"){
-                marca = "Sin Marca"
-                break
-            } else {
-                alert("Ingresaste una opción que no es valida😥, intentalo de nuevo!");
-                consultaMarca = prompt("Ahora por favor ayúdanos eligiendo una marca en específico (Indicar un número): \n1. BOEING \n2. AIRBUS \n3. CESSNA \n4. LAN \n5. LATAM \n6. JETSMART \n7. VIVA \n8. Sin Marca");
-            }
+    aplicarDescuento() {
+        if (this.calcularTotalProductos() >= 2) {
+            return Math.round((this.calcularTotalPagar() * this.descuento)/100)
+        } else {
+            return 0;
         }
-    break;
-    } else {
-        alert("No ingresaste ninguna opción😥, intentalo de nuevo!")
-        consultaMarca = prompt("Ahora por favor ayúdanos eligiendo una marca en específico (Indicar un número): \n1. BOEING \n2. AIRBUS \n3. CESSNA \n4. LAN \n5. LATAM \n6. JETSMART \n7. VIVA \n8. Sin Marca")  
     }
-}
 
-let consultaColor = prompt("Algún color en especial? (Indicar un número): \n1. NEGRO \n2. BLANCO \n3. ROJO \n4. VERDE \n5. AMARILLO \n6. AZUL");
-
-while (true) {
-    if (consultaColor !== "") {
-        while(true){
-            
-            if (consultaColor === "1"){
-                color = "NEGRO"
-                break
-            } else if (consultaColor === "2"){
-                color = "BLANCO"
-                break
-            } else if (consultaColor === "3"){
-                color = "ROJO"
-                break
-            } else if (consultaColor === "4"){
-                color = "VERDE"
-                break
-            } else if (consultaColor === "5"){
-                color = "AMARILLO"
-                break
-            } else if (consultaColor === "6"){
-                color = "AZUL"
-                break
-            } else {
-                alert("Ingresaste una opción que no es valida😥, intentalo de nuevo!")
-                consultaColor = prompt("Algún color en especial? (Indicar un número): \n1. NEGRO \n2. BLANCO \n3. ROJO \n4. VERDE \n5. AMARILLO \n6. AZUL")
-            }
+    calcularTotalPagar() {
+        let total = 0;
+        
+        this.productos.forEach(item => {
+            total += item.precio;
+        });
+        return total;
         }
-    break;
-    } else {
-        alert("No ingresaste ninguna opción😥, intentalo de nuevo!")
-        consultaColor = prompt("Algún color en especial? (Indicar un número): \n1. NEGRO \n2. BLANCO \n3. ROJO \n4. VERDE \n5. AMARILLO \n6. AZUL")
+}
+
+function listarProductos() {
+    let salida = "";
+    
+    products.forEach(item => {
+        salida += item.id + " - " + item.producto + " - " + item.marca + " - " + item.color + " - S/." + item.precio + "\n";
+    })
+
+    return salida;
+}
+
+//Ejecuto el programa
+const canasta = new Canasta();
+
+let opcionSeleccionada = 15;
+
+let nombre = prompt("Bienvenido a la plataforma de UMBRAL'98✈️, somos los especialistas en brindarte los mejores productos personalizados con temática aeronáutica! \n\nPorfavor indicanos tu nombre👨‍✈️:")
+
+alert("Encantados de tenerte con nosotros " + nombre.toUpperCase() + "🤗");
+
+while (opcionSeleccionada != 0) {
+
+    opcionSeleccionada = parseInt(prompt("CATALOGO DE PRODUCTOS UMBRAL'98👨‍✈️✌.\n Seleccionar el producto a agregar a la Canasta: \n(Pulsa 0 para Salir) \n\n" + listarProductos()))
+
+    if (opcionSeleccionada == 0) {
+        break;
     }
+
+
+    canasta.agregarProducto(opcionSeleccionada);
 }
 
-let precioProducto = 50;
-let precioDelivery = 10
+let productosCanasta = "Hola de nuevo " + nombre.toUpperCase() + ", estos son los detalles de todo tu pedido😉: \n\n" + canasta.listarCanasta();
+let salidaSubTotal = "💠Subtotal: S/." + canasta.calcularTotalPagar();
+let salidaDescuento = "💥Descuento:  S/." + canasta.aplicarDescuento();
+let montoFinal = "✅Total: S/." + Math.round(canasta.calcularTotalPagar() - canasta.aplicarDescuento());
 
-let delivery = prompt(`Por ultimo ${nombre}. Deseas que te llevemos el producto a tu domicilio? El precio del delívery es 10 soles.? (Indicar un número): \n1. SI \n2. NO`)
-
-while (true) {
-    if (delivery !== "") {
-        while(true){
-
-            function servDeliv(){
-            let suma = precioProducto + precioDelivery
-            return suma
-            }
-            let sumaFinal = servDeliv(); 
-
-            if (delivery === "1"){
-                delivery = 1;
-                alert(`Perfecto, como resumen tenemos: \nEscogiste ${producto} como producto y que sea de la marca ${marca} y, además que sea de color ${color}. El monto final con Delivery incluído es de ${sumaFinal} soles. Te estaremos enviando el catálogo de los productos solicitados al siguiente correo: ${email}.`)
-                break
-            } else if (delivery === "2"){
-                delivery = 2;
-                alert(`Perfecto, como resumen tenemos: \nEscogiste ${producto} como producto y que sea de la marca ${marca} y, además que sea de color ${color}. El monto final sin Delivery es de ${precioProducto}. Te estaremos enviando el catálogo de los productos solicitados al siguiente correo: ${email}.`)
-                break
-            } else {
-                alert("Ingresaste una opción que no es valida😥, intentalo de nuevo!")
-                delivery = prompt(`Por ultimo ${nombre}. Deseas que te llevemos el producto a tu domicilio? El precio del delívery es 10 soles.? (Indicar un número): \n1. SI \n2. NO`)
-            }
-        }
-    break;
-    } else {
-        alert("No ingresaste ninguna opción😥, intentalo de nuevo!")
-        delivery = prompt(`Por ultimo ${nombre}. Deseas que te llevemos el producto a tu domicilio? El precio del delívery es 10 soles.? (Indicar un número): \n1. SI \n2. NO`)
-    }
-}
-
-//Creando un Objeto por pedido
-
-// const cliente = {
-//     name: nombre,
-//     mail: email,
-//     age: edad,
-// }
-// const pedido = {
-//     product: producto,
-//     brand: marca,
-//     color: color,
-//     delivery:delivery,
-// }
-
-//  console.log(cliente);
-
-
-//Creando un Objeto por funcion
-
-function cliente(nombre, email, edad) {
-    this.nombre = nombre.toUpperCase();
-    this.email = email;
-    this.edad = edad;
-}
-
-function pedido(producto, marca, color, sumaFinal){
-    this.producto = producto;
-    this.marca = marca;
-    this.color = color;
-    this.delivery = sumaFinal
-}
-
-const cliente1 = new cliente(nombre, email,edad);
-
-const pedido1 = new pedido(producto, marca, color,servDeliv());
-
-console.log(cliente1);
-console.log(pedido1);
+alert(productosCanasta + "\n\n" + salidaSubTotal + "\n" + salidaDescuento + "\n" + montoFinal);

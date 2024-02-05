@@ -1,0 +1,55 @@
+*{
+    margin:0;
+    padding:0;
+}
+
+body{
+    background-color: rgb(6, 23, 39);
+    background-image: url(/imagenes/fondo.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+#cuadrobienvenida {
+    height: 80vh;
+    width: 60vw;
+    background-color: rgba(0, 0, 0,0.7);
+    border-radius: 50px;
+    display: flex;
+    justify-content: center; 
+    align-items: center;
+    border: 5px solid white;
+}
+
+.textocentral {
+    text-align: center;
+}
+
+h1 {
+    margin:0 auto;
+    color: white;
+    width:50%;
+    text-align: center;
+    justify-content: center;
+    padding:0 10%;
+    font-size: 4rem;
+    font-family: 'Segoe UI', Tahoma, Verdana, sans-serif;
+}
+
+img {
+    justify-content: center;
+}
+
+p{
+    color:white;
+    width: 60%;
+    margin: 0 auto;
+    text-align: center;
+    margin-top: 40px;
+    margin-bottom: 40px;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Verdana, sans-serif
+}
