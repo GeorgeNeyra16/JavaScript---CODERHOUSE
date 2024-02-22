@@ -1,0 +1,64 @@
+.icon-hover:hover {
+    border-color: #3b71ca !important;
+    background-color: white !important;
+}
+  
+.icon-hover:hover i {
+    color: #3b71ca !important;
+}
+
+.centrar-header {
+    display:flex; 
+    justify-content: space-between;
+}
+
+.menu-centrar{
+    display:flex; 
+    justify-content: space-around;
+}
+
+.fondoAttach {
+    background-color: rgb(36, 149, 255);
+    background-image: url(../imagenes/fondoAttach.jpg);
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position:0px 150px;
+    height: 20vw;
+}
+
+.check {
+    height: 30px;
+    margin: 7px;
+}
+
+.bottomrow {
+    background-color: black;
+    height: 1vw;
+    background-image: url(../imagenes/bottomback.jpg);
+    background-attachment: fixed;
+}
+
+.fondo1 {
+    background-image: url(../imagenes/fondo1.png);
+    background-size: cover;
+    
+}
+
+h1.bienvenido {
+    font-weight: bold;
+}
+
+.lasmejores{
+    font-weight: bold;
+}
+
+.flexfooter {
+    display:flex;
+    justify-content:space-between;
+}
+
+.cuadrodatos {
+    border: 4px dashed rgb(36, 149, 255);
+}
+

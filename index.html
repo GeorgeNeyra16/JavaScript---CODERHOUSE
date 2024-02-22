@@ -11,24 +11,408 @@
     <!-- Bootstrap -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
     <!-- CSS -->
-    <link rel="stylesheet" href="./style/style.css">
+    <link rel="stylesheet" href="./style/inicio.css">
 
     <title>UMBRAL '98</title>
 </head>
 <body>
+    <!--Main Navigation-->
     <header>
+        <!-- Jumbotron -->
+        <div class="p-3 text-center bg-white border-bottom">
+          <div class="container">
+            <div class="centrar-header row gy-3">
+              <!-- Left elements -->
+              <div class="col-lg-2 col-sm-4 col-4">
+                <a href="#" class="float-start">
+                  <img src="./imagenes/logo_finalresize.png" height="35" />
+                </a>
+              </div>
+              <!-- Left elements -->
+      
+              <!-- Center elements -->
+              <div class="order-lg-last col-lg-5 col-sm-8 col-8">
+                <div class="d-flex float-end  bg-primary">
+                  
+                  <a href="./carrito.html" class="btn colorFondo2 position-relative" target="_blank">
+                    <p class="d-none d-md-block mb-0 text-white">🛒<strong>CARRITO</strong></p> 
+                    <span id="productsCarrito" class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">0</span>
+                  </a>
+                </div>
+              </div>
+              <!-- <a href="carrito.html" class="btn colorFondo2 position-relative">
+                <img src="images/cart2.svg" alt="Carrito" width="24">
+                <span id="totalCarrito" class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">0</span>
+              </a>     -->
+              <!-- Center elements -->
+      
+              <!-- Right elements -->
+              <!-- <div class="col-lg-5 col-md-12 col-12">
+                <div class="input-group float-center">
+                  <div class="form-outline">
+                    <input type="search" id="form1" class="form-control" />
+                    <label class="form-label" for="form1">Search</label>
+                  </div>
+                  <button type="button" class="btn btn-primary shadow-0">
+                    <i class="fas fa-search"></i>
+                  </button>
+                </div>
+              </div> -->
+              <!-- Right elements -->
+            </div>
+          </div>
+        </div>
+        <!-- Jumbotron -->
+      
+        <!-- Navbar navbar navbar-expand-lg navbar-light-->
+        <nav class="navbar navbar-expand-sm bg-white">
+            <!-- Container wrapper -->
+            <div class="container justify-content-center justify-content-md-between">
+                <!-- Toggle button -->
+                <!-- <button
+                        class="navbar-toggler border py-2 text-dark"
+                        type="button"
+                        data-mdb-toggle="collapse"
+                        data-mdb-target="#navbarLeftAlignExample"
+                        aria-controls="navbarLeftAlignExample"
+                        aria-expanded="false"
+                        aria-label="Toggle navigation"
+                        >
+                        
+                    <i class="fas fa-bars">
+                    </i>
+                </button> -->
+        
+                <!-- Collapsible wrapper -->
+                <div class="collapse navbar-collapse" >
+                    <!-- Left links -->
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <li class="nav-item">
+                            <a class="nav-link text-dark" aria-current="page" href="./nosotros.html">Nosotros</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-dark" href="./eventos.html">Eventos</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-dark" href="./preguntas.html">Preguntas Frecuentes</a>
+                        </li>
+                    </ul>
+                  <!-- Left links -->
+                </div>
+            </div>
+          <!-- Container wrapper -->
+        </nav>
+        <!-- Navbar -->
+        <!-- Jumbotron -->
+        <div class="fondo1 bg-primary text-white py-5">
+          <div class="container py-5">
+            <h1 class="bienvenido">
+              Bienvenido, <span id="customer">Amigo</span>...<br />
+              los mejores Lanyards para ti🤩!!
+            </h1>
+            <p class="lasmejores">
+              Las mejores marcas, Mejores Precios, Servicio de Calidad
+            </p>
+            <!-- <button type="button" class="btn btn-outline-light">
+              Learn more
+            </button>
+            <button type="button" class="btn btn-light shadow-0 text-primary pt-2 border border-white">
+              <span class="pt-1">Purchase now</span>
+            </button> -->
+          </div>
+        </div>
+        <!-- Jumbotron -->
     </header>
+    <!-- Products -->
+    <div class="bottomrow"></div>
+    <section>
+        <div class="container my-5">
+          <header class="mb-4">
+            <h3 class="text-center">DESPEGA TU PERSONALIDAD✈</h3>
+          </header>
+          <!-- <div class="row">
+            <div class="col-lg-3 col-md-6 col-sm-6 d-flex">
+              <div class="card w-100 my-2 shadow-2-strong">
+                <div id="cambiar">
+                  <a href="pag3.html" class="text-decoration-none">
+                    <img src="./imagenes/L1.webp" class="card-img-top" style="aspect-ratio: 1 / 1" />
+                  </a>
+                </div>
+                <div class="card-body d-flex flex-column">
+                  <h5 id="card-title" class="card-title">LANYARD - BOEING 737 747 767 777 - NEGRO</h5>
+                  <p class="card-text">S/. 30.00</p>
+                  <div class="card-footer d-flex align-items-end pt-3 px-0 pb-0 mt-auto">
+                    <a href="#!" class="btn btn-primary shadow-0 me-1">Añadir al Carrito🛒</a>
+                    <a href="#!" class="btn btn-light border px-2 pt-2 icon-hover"><i class="fas fa-heart fa-lg text-secondary px-1"></i></a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-3 col-md-6 col-sm-6 d-flex">
+              <div class="card w-100 my-2 shadow-2-strong">
+                <div id="cambiar">
+                  <a href="pag3.html" class="text-decoration-none">
+                    <img src="./imagenes/L2.webp" class="card-img-top" style="aspect-ratio: 1 / 1" />
+                  </a>
+                </div>
+                <div class="card-body d-flex flex-column">
+                  <h5 id="card-title" class="card-title">LANYARD - BOEING - AZUL</h5>
+                  <p class="card-text">S/. 28.00</p>
+                  <div class="card-footer d-flex align-items-end pt-3 px-0 pb-0 mt-auto">
+                    <a href="#!" class="btn btn-primary shadow-0 me-1">Añadir al Carrito🛒</a>
+                    <a href="#!" class="btn btn-light border px-2 pt-2 icon-hover"><i class="fas fa-heart fa-lg text-secondary px-1"></i></a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-3 col-md-6 col-sm-6 d-flex">
+              <div class="card w-100 my-2 shadow-2-strong">
+                <img src="./imagenes/L3.webp" class="card-img-top" style="aspect-ratio: 1 / 1" />
+                <div class="card-body d-flex flex-column">
+                  <h5 id="card-title" class="card-title">Lanyard - BOEING - AZUL</h5>
+                  <p class="card-text">S/. 25.00</p>
+                  <div class="card-footer d-flex align-items-end pt-3 px-0 pb-0 mt-auto">
+                    <a href="#!" class="btn btn-primary shadow-0 me-1">Añadir al Carrito🛒</a>
+                    <a href="#!" class="btn btn-light border px-2 pt-2 icon-hover"><i class="fas fa-heart fa-lg text-secondary px-1"></i></a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-3 col-md-6 col-sm-6 d-flex">
+              <div class="card w-100 my-2 shadow-2-strong">
+                <img src="./imagenes/L4.webp" class="card-img-top" style="aspect-ratio: 1 / 1" />
+                <div class="card-body d-flex flex-column">
+                  <h5 id="card-title" class="card-title">Lanyard - BORN TO FLY - ROSA</h5>
+                  <p class="card-text">S/. 20.00</p>
+                  <div class="card-footer d-flex align-items-end pt-3 px-0 pb-0 mt-auto">
+                    <a href="#!" class="btn btn-primary shadow-0 me-1">Añadir al Carrito🛒</a>
+                    <a href="#!" class="btn btn-light border px-2 pt-2 icon-hover"><i class="fas fa-heart fa-lg text-secondary px-1"></i></a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-3 col-md-6 col-sm-6 d-flex">
+              <div class="card w-100 my-2 shadow-2-strong">
+                <img src="./imagenes/L5.webp" class="card-img-top" style="aspect-ratio: 1 / 1" />
+                <div class="card-body d-flex flex-column">
+                  <h5 id="card-title" class="card-title">Lanyard - REMOVE BEFORE FLIGHT - ROJO</h5>
+                  <p class="card-text">S/. 18.00</p>
+                  <div class="card-footer d-flex align-items-end pt-3 px-0 pb-0 mt-auto">
+                    <a href="#!" class="btn btn-primary shadow-0 me-1">Añadir al Carrito🛒</a>
+                    <a href="#!" class="btn btn-light border px-2 pt-2 icon-hover"><i class="fas fa-heart fa-lg text-secondary px-1"></i></a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-3 col-md-6 col-sm-6 d-flex">
+              <div class="card w-100 my-2 shadow-2-strong">
+                <img src="./imagenes/L6.webp" class="card-img-top" style="aspect-ratio: 1 / 1" />
+                <div class="card-body d-flex flex-column">
+                  <h5 id="card-title" class="card-title">Lanyard - AIRBUS - NEGRO</h5>
+                  <p class="card-text">S/. 35.00</p>
+                  <div class="card-footer d-flex align-items-end pt-3 px-0 pb-0 mt-auto">
+                    <a href="#!" class="btn btn-primary shadow-0 me-1">Añadir al Carrito🛒</a>
+                    <a href="#!" class="btn btn-light border px-2 pt-2 icon-hover"><i class="fas fa-heart fa-lg text-secondary px-1"></i></a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-3 col-md-6 col-sm-6 d-flex">
+              <div class="card w-100 my-2 shadow-2-strong">
+                <img src="./imagenes/L7.webp" class="card-img-top" style="aspect-ratio: 1 / 1" />
+                <div class="card-body d-flex flex-column">
+                  <h5 id="card-title" class="card-title">Lanyard - AIRBUS - AZUL</h5>
+                  <p class="card-text">S/. 30.00</p>
+                  <div class="card-footer d-flex align-items-end pt-3 px-0 pb-0 mt-auto">
+                    <a href="#!" class="btn btn-primary shadow-0 me-1">Añadir al Carrito🛒</a>
+                    <a href="#!" class="btn btn-light border icon-hover px-2 pt-2"><i class="fas fa-heart fa-lg text-secondary px-1"></i></a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-3 col-md-6 col-sm-6 d-flex">
+              <div class="card w-100 my-2 shadow-2-strong">
+                <img src="./imagenes/L8.webp" class="card-img-top" style="aspect-ratio: 1 / 1" />
+                <div class="card-body d-flex flex-column">
+                  <h5 id="card-title" class="card-title">Lanyard - CESSNA - NEGRO</h5>
+                  <p class="card-text">S/. 20.00</p>
+                  <div class="card-footer d-flex align-items-end pt-3 px-0 pb-0 mt-auto">
+                    <a href="#!" class="btn btn-primary shadow-0 me-1">Añadir al Carrito🛒</a>
+                    <a href="#!" class="btn btn-light border px-2 pt-2 icon-hover"><i class="fas fa-heart fa-lg text-secondary px-1"></i></a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-3 col-md-6 col-sm-6 d-flex">
+              <div class="card w-100 my-2 shadow-2-strong">
+                <img src="./imagenes/L9.webp" class="card-img-top" style="aspect-ratio: 1 / 1" />
+                <div class="card-body d-flex flex-column">
+                  <h5 id="card-title" class="card-title">Lanyard - AIR TRAFFIC CONTROLLER - NEGRO</h5>
+                  <p class="card-text">S/. 28.00</p>
+                  <div class="card-footer d-flex align-items-end pt-3 px-0 pb-0 mt-auto">
+                    <a href="#!" class="btn btn-primary shadow-0 me-1">Añadir al Carrito🛒</a>
+                    <a href="#!" class="btn btn-light border px-2 pt-2 icon-hover"><i class="fas fa-heart fa-lg text-secondary px-1"></i></a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-3 col-md-6 col-sm-6 d-flex">
+              <div class="card w-100 my-2 shadow-2-strong">
+                <img src="./imagenes/L10.webp" class="card-img-top" style="aspect-ratio: 1 / 1" />
+                <div class="card-body d-flex flex-column">
+                  <h5 id="card-title" class="card-title">Lanyard - AIR TRAFFIC CONTROLLER - ROJO</h5>
+                  <p class="card-text">S/. 28.00</p>
+                  <div class="card-footer d-flex align-items-end pt-3 px-0 pb-0 mt-auto">
+                    <a href="#!" class="btn btn-primary shadow-0 me-1">Añadir al Carrito🛒</a>
+                    <a href="#!" class="btn btn-light border px-2 pt-2 icon-hover"><i class="fas fa-heart fa-lg text-secondary px-1"></i></a>
+                  </div>
+                </div>
+              </div>
+          </div> -->
+        </div>
+    </section>
+    <!-- TARJETA DE PRODUCTOS -->
+    <section class="d-flex justify-content-center">
+      <div id="productoscambio" class="container row d-flex justify-content-center">
+      </div>
+    </section>
+    <!-- Products -->
+    <div class="bottomrow"></div>
+    <!-- Feature -->
+    <section class="mt-5" style="background-color: #f5f5f5;">
+        <div class="container text-dark pt-3">
+          <header class="pt-4 pb-3">
+            <h2>POR QUÉ ELEGIRNOS?</h2>
+          </header>
+      
+          <div class="row mb-4">
+            <div class="col-lg-4 col-md-6">
+              <figure class="d-flex align-items-center mb-4">
+                <img class="check" src="./imagenes/check.png" alt="check">
+                <figcaption class="info">
+                  <h6 class="title">PRECIOS INSUPERABLES</h6>
+                  <p>Precios muy reducidos pensando en toda nuestra familia amantes de los Lanyards❤</p>
+                </figcaption>
+              </figure>
+              <!-- itemside // -->
+            </div>
+            <!-- col // -->
+            <div class="col-lg-4 col-md-6">
+              <figure class="d-flex align-items-center mb-4">
+                <img class="check" src="./imagenes/check.png" alt="check">
+                <figcaption class="info">
+                  <h6 class="title">EXCELENTE CALIDAD</h6>
+                  <p>La calidad de nuestros productos hablan por si mismos al poder ver y sentir el mejor material.</p>
+                </figcaption>
+              </figure>
+              <!-- itemside // -->
+            </div>
+            <!-- col // -->
+            <div class="col-lg-4 col-md-6">
+              <figure class="d-flex align-items-center mb-4">
+                <img class="check" src="./imagenes/check.png" alt="check">
+                <figcaption class="info">
+                  <h6 class="title">ATENCIÓN PERSONALIZADA</h6>
+                  <p>Umbral'98 es una familia, recibirás una atención de primer nivel de nuestra parte!!</p>
+                </figcaption>
+              </figure>
+              <!-- itemside // -->
+            </div>
+            <!-- col // -->
+            <div class="col-lg-4 col-md-6">
+              <figure class="d-flex align-items-center mb-4">
+                <img class="check" src="./imagenes/check.png" alt="check">
+                <figcaption class="info">
+                  <h6 class="title">SATISFACCIÓN DEL CLIENTE</h6>
+                  <p>Tenemos los mejores comentarios y recomendaciones de nuestra distinguida clientela.</p>
+                </figcaption>
+              </figure>
+              <!-- itemside // -->
+            </div>
+            <!-- col // -->
+            <div class="col-lg-4 col-md-6">
+              <figure class="d-flex align-items-center mb-4">
+                <img class="check" src="./imagenes/check.png" alt="check">
+                <figcaption class="info">
+                  <h6 class="title">DESCUENTOS</h6>
+                  <p>Por la compra de un segundo producto llevate un super descuento!!</p>
+                </figcaption>
+              </figure>
+              <!-- itemside // -->
+            </div>
+            <!-- col // -->
+          </div>
+        </div>
+        <!-- container end.// -->
+    </section>
+    <!-- Feature -->
+    
+    <!-- Background Attach -->
+    <div class="fondoAttach">
+    </div>
+    <!-- Background Attach -->
+    
+    <!-- Footer -->
+    <footer class="text-center text-lg-start text-muted mt-3" style="background-color: #f5f5f5;">
+      <!-- Section: Links  -->
+      <section class="">
+        <div class="container text-center text-md-start pt-4 pb-4">
+          <!-- Grid row -->
+          <div class="flexfooter row mt-3">
+            <!-- Grid column -->
+            <div class="col-12 col-lg-3 col-sm-12 mb-2">
+              <!-- Content -->
+              <a href="#">
+                <img src="./imagenes/logo_finalresize.png" height="35" />
+              </a>
+              <p class="mt-2 text-dark">
+                © 2023 Copyright: George Neyra
+              </p>
+            </div>
+    
+            <!-- Grid column -->
+            <div class="col-6 col-sm-4 col-lg-2">
+              <!-- Links -->
+              <h6 class="text-uppercase text-dark fw-bold mb-2">
+                Information
+              </h6>
+              <ul class="list-unstyled mb-4">
+                <li><a class="text-muted" href="#">Inicio</a></li>
+                <li><a class="text-muted" href="./nosotros.html">Nosotros</a></li>
+                <li><a class="text-muted" href="./eventos.html">Eventos</a></li>
+                <li><a class="text-muted" href="./carrito.html">Mi Carrito🛒</a></li>
+              </ul>
+            </div>
+    
+            <!-- Grid column -->
+            <div class="col-12 col-sm-12 col-lg-3">
+              <!-- Links -->
+              <h6 class="text-uppercase text-dark fw-bold mb-2">Nuestro Boletín</h6>
+              <p class="text-muted">Mantente informado con las últimas actualizaciones de nuestros nuevos productos!</p>
+              <div id="prueba" class="input-group mb-3">
+                <input type="email" id="prueba" class="boletincnl form-control border" placeholder="Email" aria-label="Email" aria-describedby="button-addon2" />
+                <button class="boletincnl btn btn-light border shadow-0" type="button" id="prueba2" data-mdb-ripple-color="dark">
+                  Join
+                </button>
+              </div>
+            </div>
+            <!-- Grid column -->
+          </div>
+          <!-- Grid row -->
+        </div>
+      </section>
+      <!-- Section: Links  -->
+    
+      <div class="bottomrow"></div>
+      
+    </footer>
+    <!-- Footer -->
 
-    <main id="cuadrobienvenida">
-        <div class="textocentral">
-            <h1>Bienvenido a</h1>
-            <img class="img-responsive" src="./imagenes/logo_white.png" alt="logo">
-            <p>Somos un emprendimiento Aeronáutico de venta de LANYARDS de las más conocidas aerolíneas y marcas del rubro. Luce con estilo el toy!! <br>DEJA VOLAR TU ESTILO <br>✈️&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;✈️&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;✈️&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;✈️&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;✈️&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;✈️&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;✈️&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;✈️&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;✈️&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;✈️</p>
-        </div> 
-    </main>
-    <footer></footer>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
-    <!-- <script src="./js/script.js"></script> -->
-    <script src="./js/script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" ></script>
+    <!-- integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous" -->
+    <script src="./js/funciones.js"></script>
+    <script src="./js/inicio.js"></script>
+    <script src="./js/consultanombre.js"></script>
+
 </body>
 </html>
